@@ -1,0 +1,8 @@
+<network>
+  <forward dev='eno3' mode='route'>
+    <interface dev='eno3'/>
+  </forward>
+  <name>management</name>
+    <ip address='10.16.210.1' netmask='255.255.255.0'/>
+</network>
+

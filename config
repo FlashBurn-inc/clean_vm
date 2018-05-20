@@ -1,0 +1,38 @@
+# Libvirt networks
+# external network parameters
+# host interface for routing in managed network
+HOST_IF=eno3
+
+EXTERNAL_NET_NAME=cleanvm
+EXTERNAL_NET_TYPE=dhcp
+EXTERNAL_NET=192.168.100
+EXTERNAL_NET_IP=${EXTERNAL_NET}.0
+EXTERNAL_NET_MASK=255.255.255.0
+EXTERNAL_NET_HOST_IP=${EXTERNAL_NET}.1
+VM1_EXTERNAL_IP=${EXTERNAL_NET}.101
+
+# management network parameters
+MANAGEMENT_NET_NAME=management
+MANAGEMENT_NET=10.16.210
+MANAGEMENT_NET_IP=${MANAGEMENT_NET}.0
+MANAGEMENT_NET_MASK=255.255.255.0
+MANAGEMENT_HOST_IP=${MANAGEMENT_NET}.1
+
+# VMs global parameters
+SSH_PUB_KEY=~/.ssh/id_rsa.pub
+VM_TYPE=hvm
+VM_VIRT_TYPE=kvm
+VM_DNS=8.8.8.8
+VM_BASE_IMAGE=https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-disk1.img
+
+# VMs
+VM1_NAME=cleanvm
+VM1_NUM_CPU=1
+VM1_MB_RAM=2048
+VM1_HDD=/var/lib/libvirt/images/cleanvm/cleanvm.qcow2
+VM1_CONFIG_ISO=/var/lib/libvirt/images/cleanvm/config-cleanvm.iso
+VM1_EXTERNAL_IF=ens3
+VM1_MANAGEMENT_IF=ens4
+VM1_MANAGEMENT_IP=${MANAGEMENT_NET}.90
+
+
