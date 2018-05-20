@@ -8,6 +8,7 @@
 	way=$(cd "$(dirname "$0")"; pwd)
 	source "$way/config"
 
+apt install -y qemu-kvm libvirt-bin virtinst bridge-utils genisoimage
 echo ${bold}"Work dir - $way"${n}
 MAC=52:54:00:`(date; cat /proc/interrupts) | md5sum | sed -r 's/^(.{6}).*$/\1/; s/([0-9a-f]{2})/\1:/g; s/:$//;'`
 
