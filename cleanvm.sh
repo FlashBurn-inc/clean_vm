@@ -99,7 +99,7 @@ cat $way/config-drives/$VM1_NAME-config/meta-data
 echo ${bold}"user-data $VM1_NAME"${n}
 cat << userdatavm1 > $way/config-drives/$VM1_NAME-config/user-data
 #cloud-config
-password: qwertyuiop
+password: $VM1_PASS
 chpasswd: { expire: False }
 ssh_authorized_keys:
   - $(cat  $SSH_PUB_KEY)

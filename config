@@ -34,5 +34,6 @@ VM1_CONFIG_ISO=/var/lib/libvirt/images/cleanvm/config-cleanvm.iso
 VM1_EXTERNAL_IF=ens3
 VM1_MANAGEMENT_IF=ens4
 VM1_MANAGEMENT_IP=${MANAGEMENT_NET}.90
-
+#pass for ubuntu user
+VM1_PASS="qwertyuiop"
 
