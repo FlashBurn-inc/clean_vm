@@ -124,7 +124,6 @@ virt-install \
   --disk path=$VM1_HDD,format=qcow2,bus=virtio,cache=none \
   --disk path=$VM1_CONFIG_ISO,device=cdrom \
   --network network=$EXTERNAL_NET_NAME,mac=$MAC \
-  --network network=$INTERNAL_NET_NAME \
   --network network=$MANAGEMENT_NET_NAME \
   --graphics vnc,port=-1 \
   --noautoconsole --quiet --import

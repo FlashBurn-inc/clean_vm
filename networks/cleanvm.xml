@@ -8,7 +8,7 @@
   <ip address='192.168.100.1' netmask='255.255.255.0'>
     <dhcp>
       <range start='192.168.100.2' end='192.168.100.254'/>
-      <host mac='52:54:00:71:a4:d2' name='cleanvm' ip='192.168.100.101'/>
+      <host mac='52:54:00:18:ab:2c' name='cleanvm' ip='192.168.100.101'/>
     </dhcp>
   </ip>
 </network>
